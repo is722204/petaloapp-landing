@@ -1,309 +1,48 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PetaloApp | Tu sistema floral todo en uno</title>
-  <link rel="icon" href="./assets/icon.png" type="image/x-icon">
-  <meta name="description" content="Sistema profesional para florerías: vende, cobra, y entrega todo desde una sola app. Pago único de $24,000 MXN.">
-  <meta name="keywords" content="sistema para florerías, florerías ecommerce, WhatsApp flores, vender flores online">
-  <meta name="author" content="Danchago">
-  <meta property="og:image" content="./assets/icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Petalo</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Outfit', sans-serif; }
-    .tab-button.active { background-color: #e11d48; color: white; }
-    .sticky-nav { position: sticky; top: 0; z-index: 50; background: white; border-bottom: 1px solid #f3f4f6; }
-  </style>
-</head>
-<body class="bg-white text-gray-800">
-
-  <!-- Navbar -->
-  <nav class="sticky-nav flex items-center justify-between px-6 py-4">
-    <h1 class="text-xl font-bold text-rose-600">🌸 PetaloApp</h1>
-    <div class="hidden md:flex space-x-6 text-sm">
-      <a href="#beneficios" class="hover:text-rose-600">Beneficios</a>
-      <a href="#demo" class="hover:text-rose-600">Demo</a>
-      <a href="#capturas" class="hover:text-rose-600">Capturas</a>
-      <a href="#precio" class="hover:text-rose-600">Precio</a>
-      <a href="#contacto" class="hover:text-rose-600">Contacto</a>
-    </div>
-    <a href="#contacto" class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded-full text-sm md:text-base">Agenda tu demo</a>
-  </nav>
-
-  <!-- Hero -->
-  <section class="relative min-h-[89vh] flex items-center justify-center text-center text-white bg-cover bg-bottom" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('./assets/bg.png');">
-  <div class="max-w-7xl mx-auto px-6">
-    <h1 class="text-5xl font-extrabold sm:text-6xl mb-4 drop-shadow">PetaloApp</h1>
-    <p class="text-xl max-w-2xl mx-auto drop-shadow">Tu tienda digital, lista para florecer.</p>
-    <div class="mt-11 flex flex-col sm:flex-row justify-center gap-4">
-      <a href="#demo" class="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 rounded-full text-lg transition shadow-lg">Ver cómo funciona</a>
-      <a href="#contacto" class="bg-white text-rose-600 border hover:bg-rose-100 px-8 py-3 rounded-full text-lg transition">Habla con nosotros</a>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Beneficios -->
-  <section id="beneficios" class="bg-white py-24 border-t border-gray-100">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-12">Lo que hace única a PetaloApp</h2>
-      <div class="grid md:grid-cols-3 gap-12">
-        <div data-aos="fade-up">
-          <div class="w-16 h-16 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-cogs text-2xl"></i></div>
-          <h3 class="text-xl font-semibold mb-2">Control total</h3>
-          <p class="text-gray-500">Administra productos, pedidos, promociones y delivery desde una sola app.</p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="100">
-          <div class="w-16 h-16 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fab fa-whatsapp text-2xl"></i></div>
-          <h3 class="text-xl font-semibold mb-2">Ventas por WhatsApp</h3>
-          <p class="text-gray-500">Tus clientes compran y reciben todo el resumen directo en su WhatsApp.</p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="200">
-          <div class="w-16 h-16 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-credit-card text-2xl"></i></div>
-          <h3 class="text-xl font-semibold mb-2">Cobro fácil</h3>
-          <p class="text-gray-500">Integra MercadoPago y empieza a cobrar desde el primer día.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Demo -->
-  <section id="demo" class="bg-gray-50 py-24 text-center">
-    <h2 class="text-3xl font-bold mb-6">Así funciona PetaloApp</h2>
-    <p class="text-gray-600 mb-10">Explora la plataforma en acción con este video demo:</p>
-    <div class="max-w-4xl mx-auto px-6">
-      <video controls class="w-full rounded-xl shadow-lg">
-        <source src="https://youtu.be/rpJyIed5UyE?si=TmE_kHTRB_CjMvlT" type="video/mp4" />
-        Tu navegador no soporta video.
-      </video>
-    </div>
-  </section>
-
-<!-- Capturas -->
-<section id="capturas" class="bg-white py-24 border-t border-gray-100">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">Conoce cada vista</h2>
-    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">Desde la gestión hasta la experiencia de compra, todo está diseñado para enamorar.</p>
-
-    <!-- Botones -->
-    <div class="flex justify-center mb-8 space-x-4">
-      <button id="tab-admin" class="tab-button active px-6 py-2 rounded-full font-medium transition">Vista Admin</button>
-      <button id="tab-usuario" class="tab-button bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-medium transition">Vista Usuario</button>
-    </div>
-
-    <!-- Vista Admin -->
-    <div id="admin-capturas" class="tab-content grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up">
-      <div onclick="openModal('./assets/admin-alta-productos.jpg', 'Alta de productos', 'Agrega fácilmente nuevos productos con foto, precio y categorías.')" class="cursor-pointer group">
-        <img src="./assets/admin-alta-productos.jpg" class="rounded-xl shadow-md group-hover:scale-105 transition-transform" />
-        <h3 class="text-lg font-semibold mt-3">Alta de productos</h3>
-        <p class="text-gray-500 text-sm">Agrega fácilmente nuevos productos con foto, precio y categorías.</p>
-      </div>
-      <div onclick="openModal('./assets/admin-pedidos.jpg', 'Gestión de pedidos', 'Visualiza, edita y organiza pedidos con un panel claro y eficiente.')" class="cursor-pointer group">
-        <img src="./assets/admin-pedidos.jpg" class="rounded-xl shadow-md group-hover:scale-105 transition-transform" />
-        <h3 class="text-lg font-semibold mt-3">Gestión de pedidos</h3>
-        <p class="text-gray-500 text-sm">Visualiza, edita y organiza pedidos con un panel claro y eficiente.</p>
-      </div>
-      <div onclick="openModal('./assets/admin-cupons-delivery.jpg', 'Cupones y delivery', 'Crea promociones y gestiona su caducidad.')" class="cursor-pointer group">
-        <img src="./assets/admin-cupons-delivery.jpg" class="rounded-xl shadow-md group-hover:scale-105 transition-transform" />
-        <h3 class="text-lg font-semibold mt-3">Cupones y delivery</h3>
-        <p class="text-gray-500 text-sm">Crea promociones y gestiona su caducidad.</p>
-      </div>
-    </div>
-
-    <!-- Vista Usuario -->
-    <div id="usuario-capturas" class="tab-content grid grid-cols-1 md:grid-cols-3 gap-8 hidden" data-aos="fade-up">
-      <div onclick="openModal('./assets/usuario-tienda.png', 'Tienda online', 'Catálogo claro y moderno para que tus clientes elijan fácilmente.')" class="cursor-pointer group">
-        <img src="./assets/usuario-tienda.png" class="rounded-xl shadow-md group-hover:scale-105 transition-transform max-h-[350px] object-contain mx-auto" />
-        <h3 class="text-lg font-semibold mt-3">Tienda online</h3>
-        <p class="text-gray-500 text-sm">Catálogo claro y moderno para que tus clientes elijan fácilmente.</p>
-      </div>
-      <div onclick="openModal('./assets/usuario-carrito.png', 'Carrito de compra', 'Tus clientas agregan productos y pagan en línea.')" class="cursor-pointer group">
-        <img src="./assets/usuario-carrito.png" class="rounded-xl shadow-md group-hover:scale-105 transition-transform max-h-[350px] object-contain mx-auto" />
-        <h3 class="text-lg font-semibold mt-3">Carrito de compra</h3>
-        <p class="text-gray-500 text-sm">Tus clientas agregan productos y pagan en línea.</p>
-      </div>
-      <div onclick="openModal('./assets/usuario-seguimiento.png', 'Seguimiento de pedido', 'Permite a tus clientas seguir su pedido sin necesidad de preguntar.')" class="cursor-pointer group">
-        <img src="./assets/usuario-seguimiento.png" class="rounded-xl shadow-md group-hover:scale-105 transition-transform max-h-[350px] object-contain mx-auto" />
-        <h3 class="text-lg font-semibold mt-3">Seguimiento de pedido</h3>
-        <p class="text-gray-500 text-sm">Permite a tus clientas seguir su pedido sin necesidad de preguntar.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal -->
-  <div id="modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
-    <div class="bg-white rounded-xl p-6 max-w-3xl w-full mx-4 relative">
-      <button onclick="closeModal()" class="absolute top-2 right-3 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
-      <img id="modal-img" src="" class="w-full max-h-[80vh] object-contain mx-auto rounded-lg mb-4" />
-      <h3 id="modal-title" class="text-xl font-semibold mb-1"></h3>
-      <p id="modal-desc" class="text-gray-600"></p>
-    </div>
-  </div>
-</section>
-
-<!-- NUEVAS SECCIONES INTEGRADAS -->
-
-<!-- Testimonios -->
-<section class="bg-gray-50 py-24 border-t border-gray-100">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">Historias que florecen</h2>
-    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">Florerías reales que transformaron su negocio con PetaloApp.</p>
-    <div class="grid md:grid-cols-3 gap-8 text-left">
-      <div class="bg-white p-6 rounded-xl shadow" data-aos="fade-up">
-        <p class="text-gray-700 italic">“Ahora vendo el doble sin complicaciones. Mis clientes aman pedir en línea.”</p>
-        <div class="mt-4">
-          <p class="font-semibold text-rose-600">Mariela Ramos</p>
-          <p class="text-sm text-gray-500">Dueña de Florería Amore</p>
-        </div>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="100">
-        <p class="text-gray-700 italic">“Tenía miedo al principio, pero fue la mejor inversión que he hecho para mi negocio.”</p>
-        <div class="mt-4">
-          <p class="font-semibold text-rose-600">Paola Fernández</p>
-          <p class="text-sm text-gray-500">Florería La Rosa del Día</p>
-        </div>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="200">
-        <p class="text-gray-700 italic">“Lo que más me gusta es lo fácil que es todo, desde subir flores hasta ver mis ventas.”</p>
-        <div class="mt-4">
-          <p class="font-semibold text-rose-600">Elena Martínez</p>
-          <p class="text-sm text-gray-500">Florería Las Gardenias</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Publico ideal -->
-<section class="bg-white py-24 text-center">
-  <div class="max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6">¿Es PetaloApp para ti?</h2>
-    <p class="text-gray-700 text-lg mb-8">Si te identificas con alguna de estas frases, la respuesta es sí:</p>
-    <ul class="text-left space-y-4 text-gray-800 text-lg max-w-2xl mx-auto">
-      <li>🌸 Quieres vender más sin depender de plataformas caras.</li>
-      <li>🌸 Te gustaría tener presencia en internet.</li>
-      <li>🌸 Buscas una solución profesional sin pagar mensualidades.</li>
-      <li>🌸 No tienes tienda online o la que tienes es complicada.</li>
-    </ul>
-    <a href="#contacto" class="mt-10 inline-block bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 rounded-full text-lg transition">Quiero una demo</a>
-  </div>
-</section>
-
-<!-- Todo lo que incluye -->
-<section class="bg-gray-50 py-24 text-center">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6">Todo lo que incluye tu PetaloApp</h2>
-    <div class="grid md:grid-cols-3 gap-12 mt-12 text-left">
-      <div>
-        <h3 class="font-semibold mb-2 text-rose-600">🌐 Tienda en línea</h3>
-        <p class="text-gray-600">Personalizada con tu logo, colores y dominio propio.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-2 text-rose-600">📦 Gestor de pedidos</h3>
-        <p class="text-gray-600">Panel para ver y organizar pedidos fácilmente.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-2 text-rose-600">📲 WhatsApp + MercadoPago</h3>
-        <p class="text-gray-600">Integración directa para vender y cobrar sin esfuerzo.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-2 text-rose-600">🏱 Cupones y promociones</h3>
-        <p class="text-gray-600">Crea ofertas irresistibles y haz que regresen por más.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-2 text-rose-600">📊 Reportes</h3>
-        <p class="text-gray-600">Analiza tus ventas y mejora tus decisiones.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-2 text-rose-600">💬 Soporte y capacitación</h3>
-        <p class="text-gray-600">Te acompañamos paso a paso hasta que esté todo listo.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Precio único -->
-  <section id="precio" class="bg-white py-24 text-center">
-    <h2 class="text-3xl font-bold mb-6">Precio único. Sin mensualidades.</h2>
-    <p class="mb-8 text-gray-600 text-lg">PetaloApp es tuya por completo, instalada en tu propio servidor.</p>
-    <div class="bg-white max-w-md mx-auto p-10 rounded-2xl shadow-xl border">
-      <h3 class="text-xl font-semibold mb-2">Pago único</h3>
-      <p class="text-4xl font-bold text-rose-600 mb-4">$24,000 MXN</p>
-      <ul class="text-gray-700 text-left mb-6 space-y-2">
-        <li>✔️ Instalación y configuración completa</li>
-        <li>✔️ Acceso admin y tienda personalizada</li>
-        <li>✔️ WhatsApp + MercadoPago integrados</li>
-        <li>✔️ Soporte y capacitación inicial</li>
-      </ul>
-      <p class="text-sm text-green-700 mb-2">Quedan <strong>5 licencias</strong> disponibles este mes.</p>
-      <a href="#contacto" class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-full text-lg transition">Solicitar instalación</a>
-    </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto" class="bg-gray-100 py-24 text-center">
-    <h2 class="text-3xl font-bold mb-4">¿Lista para florecer con PetaloApp?</h2>
-    <p class="mb-4 text-gray-600">Déjanos tus datos y te contactamos sin compromiso. Respuesta en menos de 24h.</p>
-    <form class="max-w-xl mx-auto px-6 grid gap-4">
-      <input type="text" placeholder="Nombre de tu florería" class="p-3 rounded border" required />
-      <input type="email" placeholder="Correo electrónico" class="p-3 rounded border" required />
-      <input type="tel" placeholder="Número de WhatsApp" class="p-3 rounded border" required />
-      <button class="bg-rose-700 hover:bg-rose-800 text-white py-3 rounded-full text-lg">Solicitar demo</button>
-    </form>
-    <a href="https://wa.me/523311116007" target="_blank" class="inline-flex items-center justify-center gap-2 mt-6 text-green-600 hover:underline">
-      <i class="fab fa-whatsapp"></i> También puedes escribirnos por WhatsApp
-    </a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-white text-center py-8 border-t text-sm text-gray-500">
-    © 2025 PetaloApp. Hecho con 💐 para florerías profesionales.
-  </footer>
-
-  <script>AOS.init();</script>
   <script>
-  const adminTab = document.getElementById('tab-admin');
-  const usuarioTab = document.getElementById('tab-usuario');
-  const adminContent = document.getElementById('admin-capturas');
-  const usuarioContent = document.getElementById('usuario-capturas');
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#2d6a4f',
+              light: '#d8f3dc',
+              dark: '#1b4332'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply bg-gray-50 text-gray-800 antialiased font-sans;
+      }
+    }
+    @layer components {
+      .btn-primary {
+        @apply bg-primary text-white font-medium py-2 px-4 rounded-lg shadow-sm hover:bg-primary-dark transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 flex justify-center items-center;
+      }
+      .card {
+        @apply bg-white rounded-xl shadow-sm border border-gray-100 p-6;
+      }
+      .input-field {
+        @apply w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition duration-200;
+      }
+    }
+  </style>
+<link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
+<body>
+  <app-root></app-root>
+<script src="runtime.a423b2f9aa75725e.js" type="module"></script><script src="polyfills.7c2fcc47033eaa73.js" type="module"></script><script src="main.3320374ace9fd504.js" type="module"></script>
 
-  adminTab.onclick = () => {
-    adminTab.classList.add('active');
-    usuarioTab.classList.remove('active');
-    adminContent.classList.remove('hidden');
-    usuarioContent.classList.add('hidden');
-  };
-
-  usuarioTab.onclick = () => {
-    usuarioTab.classList.add('active');
-    adminTab.classList.remove('active');
-    usuarioContent.classList.remove('hidden');
-    adminContent.classList.add('hidden');
-  };
-
-  function openModal(src, title, desc) {
-    document.getElementById('modal-img').src = src;
-    document.getElementById('modal-title').textContent = title;
-    document.getElementById('modal-desc').textContent = desc;
-    document.getElementById('modal').classList.remove('hidden');
-  }
-
-  function closeModal() {
-    document.getElementById('modal').classList.add('hidden');
-  }
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === "Escape") closeModal();
-  });
-</script>
-
-</body>
-</html>
+</body></html>
